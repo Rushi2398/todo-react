@@ -1,10 +1,17 @@
 const express = require("express");
 const { createTodo, updateTodo } = require("./types");
 const { todo } = require("./db");
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-
+// access restrict by
+// app.use(
+//   cors({
+//     origin: "http://localhost:5173/",
+//   })
+// );
+app.use(cors());
 //Body {
 //     title: String,
 //     description: string
