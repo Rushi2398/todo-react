@@ -46,7 +46,7 @@ app.put("/completed", async (req, res) => {
     });
     return;
   }
-  await todo.update(
+  await todo.updateOne(
     {
       _id: req.body.id, // which item you want to update
     },
@@ -56,8 +56,8 @@ app.put("/completed", async (req, res) => {
   );
 
   res.json({
-    msg; "todo is completed"
-  })
+    msg: "todo is completed",
+  });
 });
 
 app.listen(3000);
