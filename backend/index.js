@@ -1,6 +1,8 @@
 const express = require("express");
 const { createTodo, updateTodo } = require("./types");
 const { todo } = require("./db");
+// if signin was available we can authenticate the user with the following middleware
+// const todoMiddleware = require("./middleware/todo");
 const cors = require("cors");
 
 const app = express();
